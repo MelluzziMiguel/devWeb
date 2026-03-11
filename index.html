@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./asserts/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./asserts/css/style.css">
+</head>
+<body>
+
+    <header class="navbar bg-while border-bottom px-3">
+        <button id="toggleSidebar" class="btn btn-outline-secondary">
+            <i class="bi bi-list"></i>
+        </button>
+        <span class="nav-brand ms-2">UMFG</span>
+    </header>
+
+    <div class="layout">
+        <aside id="sidebar" class="sidebar">
+            <a class="menu-item active">
+                <i class="bi bi-window-dock"></i>
+                <span>Dashboard</span>
+            </a>
+            <a class="menu-item">
+                <i class="bi bi-people"></i>
+                <span>Pessoa</span>
+            </a>
+        </aside>
+        <main class="container" style="position: relative;">
+            <h1 class="h4">Dashboard</h1>
+            <button style="position: absolute; top:10px; right: 10px; bottom:px;" class="btn btn-primary" id="btnAdicionar">Cadastrar</button>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th style="width: 120px;">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <td></td>
+                        <td> </td>
+                        <td>
+                            <button class="btn btn-outline-info"><i class="bi bi-pen"></i></button>
+                            <button class="btn btn-outline-danger"><i class="bi bi-trash3"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <div class="modal" tabindex="-1" id="exampleModal">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalTitle">Cadastro</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="indexInput">
+                    <div class="form-floating mb-3">
+                        <input type="text" name="nome" id="nomeInput" class="form-control" placeholder="name@example.com">
+                        <label>Nome Completo</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" name="email" id="emailInput" class="form-control" placeholder="E-mail">
+                        <label>E-mail</label>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="cep" id="cepInput" class="form-control" placeholder="00000-000">
+                                <label>CEP</label>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="endereco" id="enderecoInput" class="form-control" placeholder="Rua fim do mundo...">
+                                <label>Endereço</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-2">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="numero" id="numInput" class="form-control" placeholder="100">
+                                <label>Num</label>
+                            </div>
+                        </div>
+                      
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="bairro" id="bairroInput" class="form-control" placeholder="zona 0">
+                                <label>Bairro</label>
+                            </div>
+                        </div>
+                       
+    
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="complemento" id="complementoInput" class="form-control" placeholder="Em frente a um açougue">
+                                <label>Complemento</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-9">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="cidade" id="cidadeInput" class="form-control" placeholder="São Paulo">
+                                <label>Cidade</label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-3">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="UF" id="UFInput" class="form-control" placeholder="PR">
+                                <label>UF</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-primary" id="btSalvar">Salvar</button>
+                    
+                </div>
+
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./asserts/js/bootstrap.min.js"></script>
+    <script src="./asserts/js/main.js"></script>
+    <script src="./asserts/js/pessoa.js"></script>
+</body>
+</html>
